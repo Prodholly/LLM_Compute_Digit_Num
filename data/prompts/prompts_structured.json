@@ -1,0 +1,312 @@
+{
+  "experiment_metadata": {
+    "experiment_name": "Numeric Representation Effect on LLM Computation",
+    "date_conducted": "2025-10-18",
+    "llm_model": "Claude Sonnet 4.5",
+    "total_prompts": 30,
+    "tasks": 10,
+    "formats": ["numeric", "words", "strings"]
+  },
+  "prompts": [
+    {
+      "prompt_id": "task1_format_s",
+      "task_id": 1,
+      "task_name": "simple_sum",
+      "format": "strings",
+      "presentation_order": 1,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Calculate \"12\" + \"37\" + \"5.5\"",
+      "expected_answer": 54.5,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task1_format_n",
+      "task_id": 1,
+      "task_name": "simple_sum",
+      "format": "numeric",
+      "presentation_order": 2,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Calculate 12 + 37 + 5.5",
+      "expected_answer": 54.5,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task1_format_w",
+      "task_id": 1,
+      "task_name": "simple_sum",
+      "format": "words",
+      "presentation_order": 3,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Calculate twelve + thirty-seven + five point five",
+      "expected_answer": 54.5,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task2_format_w",
+      "task_id": 2,
+      "task_name": "mean",
+      "format": "words",
+      "presentation_order": 4,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the mean of these numbers: four, eight, fifteen, sixteen, twenty-three",
+      "expected_answer": 13.2,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task2_format_s",
+      "task_id": 2,
+      "task_name": "mean",
+      "format": "strings",
+      "presentation_order": 5,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the mean of these numbers: \"4\", \"8\", \"15\", \"16\", \"23\"",
+      "expected_answer": 13.2,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task2_format_n",
+      "task_id": 2,
+      "task_name": "mean",
+      "format": "numeric",
+      "presentation_order": 6,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the mean of these numbers: 4, 8, 15, 16, 23",
+      "expected_answer": 13.2,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task3_format_n",
+      "task_id": 3,
+      "task_name": "weighted_average",
+      "format": "numeric",
+      "presentation_order": 7,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Weighted average: values 10, 20 with weights 1, 3 respectively",
+      "expected_answer": 17.5,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task3_format_w",
+      "task_id": 3,
+      "task_name": "weighted_average",
+      "format": "words",
+      "presentation_order": 8,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Weighted average: values ten, twenty with weights one, three respectively",
+      "expected_answer": 17.5,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task3_format_s",
+      "task_id": 3,
+      "task_name": "weighted_average",
+      "format": "strings",
+      "presentation_order": 9,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Weighted average: values \"10\", \"20\" with weights \"1\", \"3\" respectively",
+      "expected_answer": 17.5,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task4_format_s",
+      "task_id": 4,
+      "task_name": "percentage_change",
+      "format": "strings",
+      "presentation_order": 10,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: What is the percent change from \"45\" to \"60\"?",
+      "expected_answer": 33.3333,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task4_format_w",
+      "task_id": 4,
+      "task_name": "percentage_change",
+      "format": "words",
+      "presentation_order": 11,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: What is the percent change from forty-five to sixty?",
+      "expected_answer": 33.3333,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task4_format_n",
+      "task_id": 4,
+      "task_name": "percentage_change",
+      "format": "numeric",
+      "presentation_order": 12,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: What is the percent change from 45 to 60?",
+      "expected_answer": 33.3333,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task5_format_w",
+      "task_id": 5,
+      "task_name": "unit_conversion",
+      "format": "words",
+      "presentation_order": 13,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Convert five point five kilometers to meters",
+      "expected_answer": 5500,
+      "task_type": "conversion"
+    },
+    {
+      "prompt_id": "task5_format_n",
+      "task_id": 5,
+      "task_name": "unit_conversion",
+      "format": "numeric",
+      "presentation_order": 14,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Convert 5.5 kilometers to meters",
+      "expected_answer": 5500,
+      "task_type": "conversion"
+    },
+    {
+      "prompt_id": "task5_format_s",
+      "task_id": 5,
+      "task_name": "unit_conversion",
+      "format": "strings",
+      "presentation_order": 15,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Convert \"5.5\" kilometers to meters",
+      "expected_answer": 5500,
+      "task_type": "conversion"
+    },
+    {
+      "prompt_id": "task6_format_n",
+      "task_id": 6,
+      "task_name": "probability",
+      "format": "numeric",
+      "presentation_order": 16,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: If a fair die is rolled twice, what is the probability of getting double sixes? Give decimal probability.",
+      "expected_answer": 0.027778,
+      "task_type": "probability"
+    },
+    {
+      "prompt_id": "task6_format_n2",
+      "task_id": 6,
+      "task_name": "probability",
+      "format": "numeric",
+      "presentation_order": 17,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: If a fair die is rolled 2 times, what is the probability of getting double 6's? Give decimal probability.",
+      "expected_answer": 0.027778,
+      "task_type": "probability"
+    },
+    {
+      "prompt_id": "task6_format_s",
+      "task_id": 6,
+      "task_name": "probability",
+      "format": "strings",
+      "presentation_order": 18,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: If a fair die is rolled \"2\" times, what is the probability of getting double \"6\"s? Give decimal probability.",
+      "expected_answer": 0.027778,
+      "task_type": "probability"
+    },
+    {
+      "prompt_id": "task7_format_w",
+      "task_id": 7,
+      "task_name": "slope",
+      "format": "words",
+      "presentation_order": 19,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Find the slope of the line through points (two, five) and (six, seventeen)",
+      "expected_answer": 3,
+      "task_type": "algebra"
+    },
+    {
+      "prompt_id": "task7_format_s",
+      "task_id": 7,
+      "task_name": "slope",
+      "format": "strings",
+      "presentation_order": 20,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Find the slope of the line through points (\"2\", \"5\") and (\"6\", \"17\")",
+      "expected_answer": 3,
+      "task_type": "algebra"
+    },
+    {
+      "prompt_id": "task7_format_n",
+      "task_id": 7,
+      "task_name": "slope",
+      "format": "numeric",
+      "presentation_order": 21,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Find the slope of the line through points (2, 5) and (6, 17).",
+      "expected_answer": 3,
+      "task_type": "algebra"
+    },
+    {
+      "prompt_id": "task8_format_s",
+      "task_id": 8,
+      "task_name": "standard_deviation",
+      "format": "strings",
+      "presentation_order": 22,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the population standard deviation of: \"2\", \"4\", \"4\", \"4\", \"5\", \"5\", \"7\", \"9\"",
+      "expected_answer": 2.0,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task8_format_n",
+      "task_id": 8,
+      "task_name": "standard_deviation",
+      "format": "numeric",
+      "presentation_order": 23,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the population standard deviation of: 2, 4, 4, 4, 5, 5, 7, 9",
+      "expected_answer": 2.0,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task8_format_w",
+      "task_id": 8,
+      "task_name": "standard_deviation",
+      "format": "words",
+      "presentation_order": 24,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the population standard deviation of: two, four, four, four, five, five, seven, nine",
+      "expected_answer": 2.0,
+      "task_type": "statistics"
+    },
+    {
+      "prompt_id": "task9_format_n",
+      "task_id": 9,
+      "task_name": "matrix_multiplication",
+      "format": "numeric",
+      "presentation_order": 25,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Multiply matrices: [[1,2],[3,4]] × [[2,0],[1,2]]. Provide result matrix.",
+      "expected_answer": "[[4,4],[10,8]]",
+      "task_type": "linear_algebra"
+    },
+    {
+      "prompt_id": "task9_format_w",
+      "task_id": 9,
+      "task_name": "matrix_multiplication",
+      "format": "words",
+      "presentation_order": 26,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Multiply matrices: [[one,two],[three,four]] × [[two,zero],[one,two]]. Provide result matrix.",
+      "expected_answer": "[[4,4],[10,8]]",
+      "task_type": "linear_algebra"
+    },
+    {
+      "prompt_id": "task9_format_s",
+      "task_id": 9,
+      "task_name": "matrix_multiplication",
+      "format": "strings",
+      "presentation_order": 27,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Multiply matrices: [[\"1\",\"2\"],[\"3\",\"4\"]] × [[\"2\",\"0\"],[\"1\",\"2\"]]. Provide result matrix.",
+      "expected_answer": "[[4,4],[10,8]]",
+      "task_type": "linear_algebra"
+    },
+    {
+      "prompt_id": "task10_format_w",
+      "task_id": 10,
+      "task_name": "sum_sequence",
+      "format": "words",
+      "presentation_order": 28,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the sum of integers from one to fifteen inclusive.",
+      "expected_answer": 120,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task10_format_s",
+      "task_id": 10,
+      "task_name": "sum_sequence",
+      "format": "strings",
+      "presentation_order": 29,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the sum of integers from \"1\" to \"15\" inclusive.",
+      "expected_answer": 120,
+      "task_type": "arithmetic"
+    },
+    {
+      "prompt_id": "task10_format_n",
+      "task_id": 10,
+      "task_name": "sum_sequence",
+      "format": "numeric",
+      "presentation_order": 30,
+      "prompt_text": "Instruction: Solve the task below showing your calculations step-by-step. Then on a single final line print only the numeric answer (no text). Do not use external tools. If the task involves a dataset, show intermediate numbers clearly. Task: Compute the sum of integers from 1 to 15 inclusive.",
+      "expected_answer": 120,
+      "task_type": "arithmetic"
+    }
+  ]
+}
