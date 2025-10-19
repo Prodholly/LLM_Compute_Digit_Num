@@ -1,0 +1,313 @@
+{
+  "experiment_metadata": {
+    "experiment_name": "Numeric Representation Effect on LLM Computation",
+    "date_conducted": "2025-10-18",
+    "llm_model": "Claude Sonnet 4.5",
+    "model_string": "claude-sonnet-4-5-20250929",
+    "total_prompts": 30,
+    "total_correct": 30,
+    "overall_accuracy": 1.0
+  },
+  "responses": [
+    {
+      "prompt_id": "task1_format_s",
+      "task_id": 1,
+      "task_name": "simple_sum",
+      "format": "strings",
+      "presentation_order": 1,
+      "expected_answer": 54.5,
+      "extracted_answer": 54.5,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* \"12\" → 12\n* \"37\" → 37\n* \"5.5\" → 5.5\nStep 2: Add the first two numbers 12 + 37 = 49\nStep 3: Add the third number to the result 49 + 5.5 = 54.5\n54.5"
+    },
+    {
+      "prompt_id": "task1_format_n",
+      "task_id": 1,
+      "task_name": "simple_sum",
+      "format": "numeric",
+      "presentation_order": 2,
+      "expected_answer": 54.5,
+      "extracted_answer": 54.5,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Add the first two numbers 12 + 37 = 49\nStep 2: Add the third number to the result 49 + 5.5 = 54.5\n54.5"
+    },
+    {
+      "prompt_id": "task1_format_w",
+      "task_id": 1,
+      "task_name": "simple_sum",
+      "format": "words",
+      "presentation_order": 3,
+      "expected_answer": 54.5,
+      "extracted_answer": 54.5,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers\n* twelve = 12\n* thirty-seven = 37\n* five point five = 5.5\nStep 2: Add the first two numbers 12 + 37 = 49\nStep 3: Add the third number to the result 49 + 5.5 = 54.5\n54.5"
+    },
+    {
+      "prompt_id": "task2_format_w",
+      "task_id": 2,
+      "task_name": "mean",
+      "format": "words",
+      "presentation_order": 4,
+      "expected_answer": 13.2,
+      "extracted_answer": 13.2,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers\n* four = 4\n* eight = 8\n* fifteen = 15\n* sixteen = 16\n* twenty-three = 23\nStep 2: Add all the numbers 4 + 8 = 12 12 + 15 = 27 27 + 16 = 43 43 + 23 = 66\nStep 3: Count the numbers Total count = 5\nStep 4: Calculate the mean Mean = Sum ÷ Count = 66 ÷ 5 = 13.2\n13.2"
+    },
+    {
+      "prompt_id": "task2_format_s",
+      "task_id": 2,
+      "task_name": "mean",
+      "format": "strings",
+      "presentation_order": 5,
+      "expected_answer": 13.2,
+      "extracted_answer": 13.2,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* \"4\" → 4\n* \"8\" → 8\n* \"15\" → 15\n* \"16\" → 16\n* \"23\" → 23\nStep 2: Add all the numbers 4 + 8 = 12 12 + 15 = 27 27 + 16 = 43 43 + 23 = 66\nStep 3: Count the numbers Total count = 5\nStep 4: Calculate the mean Mean = Sum ÷ Count = 66 ÷ 5 = 13.2\n13.2"
+    },
+    {
+      "prompt_id": "task2_format_n",
+      "task_id": 2,
+      "task_name": "mean",
+      "format": "numeric",
+      "presentation_order": 6,
+      "expected_answer": 13.2,
+      "extracted_answer": 13.2,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Add all the numbers 4 + 8 = 12 12 + 15 = 27 27 + 16 = 43 43 + 23 = 66\nStep 2: Count the numbers Total count = 5\nStep 3: Calculate the mean Mean = Sum ÷ Count = 66 ÷ 5 = 13.2\n13.2"
+    },
+    {
+      "prompt_id": "task3_format_n",
+      "task_id": 3,
+      "task_name": "weighted_average",
+      "format": "numeric",
+      "presentation_order": 7,
+      "expected_answer": 17.5,
+      "extracted_answer": 17.5,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Multiply each value by its weight\n* 10 × 1 = 10\n* 20 × 3 = 60\nStep 2: Sum the weighted values 10 + 60 = 70\nStep 3: Sum the weights 1 + 3 = 4\nStep 4: Calculate the weighted average Weighted average = Sum of weighted values ÷ Sum of weights = 70 ÷ 4 = 17.5\n17.5"
+    },
+    {
+      "prompt_id": "task3_format_w",
+      "task_id": 3,
+      "task_name": "weighted_average",
+      "format": "words",
+      "presentation_order": 8,
+      "expected_answer": 17.5,
+      "extracted_answer": 17.5,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers\n* ten = 10\n* twenty = 20\n* one = 1\n* three = 3\nStep 2: Multiply each value by its weight\n* 10 × 1 = 10\n* 20 × 3 = 60\nStep 3: Sum the weighted values 10 + 60 = 70\nStep 4: Sum the weights 1 + 3 = 4\nStep 5: Calculate the weighted average Weighted average = Sum of weighted values ÷ Sum of weights = 70 ÷ 4 = 17.5\n17.5"
+    },
+    {
+      "prompt_id": "task3_format_s",
+      "task_id": 3,
+      "task_name": "weighted_average",
+      "format": "strings",
+      "presentation_order": 9,
+      "expected_answer": 17.5,
+      "extracted_answer": 17.5,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* Values: \"10\" → 10, \"20\" → 20\n* Weights: \"1\" → 1, \"3\" → 3\nStep 2: Multiply each value by its weight\n* 10 × 1 = 10\n* 20 × 3 = 60\nStep 3: Sum the weighted values 10 + 60 = 70\nStep 4: Sum the weights 1 + 3 = 4\nStep 5: Calculate the weighted average Weighted average = Sum of weighted values ÷ Sum of weights = 70 ÷ 4 = 17.5\n17.5"
+    },
+    {
+      "prompt_id": "task4_format_s",
+      "task_id": 4,
+      "task_name": "percentage_change",
+      "format": "strings",
+      "presentation_order": 10,
+      "expected_answer": 33.3333,
+      "extracted_answer": 33.33,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* \"45\" → 45\n* \"60\" → 60\nStep 2: Calculate the change Change = 60 - 45 = 15\nStep 3: Calculate the percent change Percent change = (Change ÷ Original value) × 100 Percent change = (15 ÷ 45) × 100 Percent change = 0.3333... × 100 Percent change = 33.33\n33.33"
+    },
+    {
+      "prompt_id": "task4_format_w",
+      "task_id": 4,
+      "task_name": "percentage_change",
+      "format": "words",
+      "presentation_order": 11,
+      "expected_answer": 33.3333,
+      "extracted_answer": 33.33,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers\n* forty-five = 45\n* sixty = 60\nStep 2: Calculate the change Change = 60 - 45 = 15\nStep 3: Calculate the percent change Percent change = (Change ÷ Original value) × 100 Percent change = (15 ÷ 45) × 100 Percent change = 0.3333... × 100 Percent change = 33.33\n33.33"
+    },
+    {
+      "prompt_id": "task4_format_n",
+      "task_id": 4,
+      "task_name": "percentage_change",
+      "format": "numeric",
+      "presentation_order": 12,
+      "expected_answer": 33.3333,
+      "extracted_answer": 33.33,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Calculate the change Change = 60 - 45 = 15\nStep 2: Calculate the percent change Percent change = (Change ÷ Original value) × 100 Percent change = (15 ÷ 45) × 100 Percent change = 0.3333... × 100 Percent change = 33.33\n33.33"
+    },
+    {
+      "prompt_id": "task5_format_w",
+      "task_id": 5,
+      "task_name": "unit_conversion",
+      "format": "words",
+      "presentation_order": 13,
+      "expected_answer": 5500,
+      "extracted_answer": 5500,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to number\n* five point five = 5.5\nStep 2: Convert kilometers to meters 1 kilometer = 1000 meters 5.5 kilometers = 5.5 × 1000 = 5500 meters\n5500"
+    },
+    {
+      "prompt_id": "task5_format_n",
+      "task_id": 5,
+      "task_name": "unit_conversion",
+      "format": "numeric",
+      "presentation_order": 14,
+      "expected_answer": 5500,
+      "extracted_answer": 5500,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Know the conversion factor 1 kilometer = 1000 meters\nStep 2: Convert kilometers to meters 5.5 kilometers = 5.5 × 1000 = 5500 meters\n5500"
+    },
+    {
+      "prompt_id": "task5_format_s",
+      "task_id": 5,
+      "task_name": "unit_conversion",
+      "format": "strings",
+      "presentation_order": 15,
+      "expected_answer": 5500,
+      "extracted_answer": 5500,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert string to number\n* \"5.5\" → 5.5\nStep 2: Know the conversion factor 1 kilometer = 1000 meters\nStep 3: Convert kilometers to meters 5.5 kilometers = 5.5 × 1000 = 5500 meters\n5500"
+    },
+    {
+      "prompt_id": "task6_format_n",
+      "task_id": 6,
+      "task_name": "probability",
+      "format": "numeric",
+      "presentation_order": 16,
+      "expected_answer": 0.027778,
+      "extracted_answer": 0.0278,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Determine probability of rolling a 6 on a single roll\n* A fair die has 6 faces\n* Probability of rolling a 6 = 1/6\nStep 2: Calculate probability of getting double sixes (two independent events)\n* Probability of first roll being a 6 = 1/6\n* Probability of second roll being a 6 = 1/6\n* Probability of both = (1/6) × (1/6) = 1/36\nStep 3: Convert to decimal 1/36 = 0.027777... ≈ 0.0278\n0.0278"
+    },
+    {
+      "prompt_id": "task6_format_n2",
+      "task_id": 6,
+      "task_name": "probability",
+      "format": "numeric",
+      "presentation_order": 17,
+      "expected_answer": 0.027778,
+      "extracted_answer": 0.0278,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Determine probability of rolling a 6 on a single roll\n* A fair die has 6 faces\n* Probability of rolling a 6 = 1/6\nStep 2: Calculate probability of getting double sixes (two independent events)\n* Probability of first roll being a 6 = 1/6\n* Probability of second roll being a 6 = 1/6\n* Probability of both = (1/6) × (1/6) = 1/36\nStep 3: Convert to decimal 1/36 = 0.027777... ≈ 0.0278\n0.0278"
+    },
+    {
+      "prompt_id": "task6_format_s",
+      "task_id": 6,
+      "task_name": "probability",
+      "format": "strings",
+      "presentation_order": 18,
+      "expected_answer": 0.027778,
+      "extracted_answer": 0.0278,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* \"2\" → 2 (number of rolls)\n* \"6\" → 6 (the value on the die)\nStep 2: Determine probability of rolling a 6 on a single roll\n* A fair die has 6 faces\n* Probability of rolling a 6 = 1/6\nStep 3: Calculate probability of getting double sixes (two independent events)\n* Probability of first roll being a 6 = 1/6\n* Probability of second roll being a 6 = 1/6\n* Probability of both = (1/6) × (1/6) = 1/36\nStep 4: Convert to decimal 1/36 = 0.027777... ≈ 0.0278\n0.0278"
+    },
+    {
+      "prompt_id": "task7_format_w",
+      "task_id": 7,
+      "task_name": "slope",
+      "format": "words",
+      "presentation_order": 19,
+      "expected_answer": 3,
+      "extracted_answer": 3,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers\n* Point 1: (two, five) = (2, 5)\n* Point 2: (six, seventeen) = (6, 17)\nStep 2: Identify coordinates\n* x₁ = 2, y₁ = 5\n* x₂ = 6, y₂ = 17\nStep 3: Calculate the slope using the formula Slope = (y₂ - y₁) / (x₂ - x₁) Slope = (17 - 5) / (6 - 2) Slope = 12 / 4 Slope = 3\n3"
+    },
+    {
+      "prompt_id": "task7_format_s",
+      "task_id": 7,
+      "task_name": "slope",
+      "format": "strings",
+      "presentation_order": 20,
+      "expected_answer": 3,
+      "extracted_answer": 3,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* Point 1: (\"2\", \"5\") → (2, 5)\n* Point 2: (\"6\", \"17\") → (6, 17)\nStep 2: Identify coordinates\n* x₁ = 2, y₁ = 5\n* x₂ = 6, y₂ = 17\nStep 3: Calculate the slope using the formula Slope = (y₂ - y₁) / (x₂ - x₁) Slope = (17 - 5) / (6 - 2) Slope = 12 / 4 Slope = 3\n3"
+    },
+    {
+      "prompt_id": "task7_format_n",
+      "task_id": 7,
+      "task_name": "slope",
+      "format": "numeric",
+      "presentation_order": 21,
+      "expected_answer": 3,
+      "extracted_answer": 3,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Identify coordinates\n* x₁ = 2, y₁ = 5\n* x₂ = 6, y₂ = 17\nStep 2: Calculate the slope using the formula Slope = (y₂ - y₁) / (x₂ - x₁) Slope = (17 - 5) / (6 - 2) Slope = 12 / 4 Slope = 3\n3"
+    },
+    {
+      "prompt_id": "task8_format_s",
+      "task_id": 8,
+      "task_name": "standard_deviation",
+      "format": "strings",
+      "presentation_order": 22,
+      "expected_answer": 2.0,
+      "extracted_answer": 2,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* \"2\", \"4\", \"4\", \"4\", \"5\", \"5\", \"7\", \"9\" → 2, 4, 4, 4, 5, 5, 7, 9\nStep 2: Calculate the mean Sum = 2 + 4 + 4 + 4 + 5 + 5 + 7 + 9 = 40 Count = 8 Mean = 40 ÷ 8 = 5\nStep 3: Calculate squared differences from the mean\n* (2 - 5)² = (-3)² = 9\n* (4 - 5)² = (-1)² = 1\n* (4 - 5)² = (-1)² = 1\n* (4 - 5)² = (-1)² = 1\n* (5 - 5)² = 0² = 0\n* (5 - 5)² = 0² = 0\n* (7 - 5)² = 2² = 4\n* (9 - 5)² = 4² = 16\nStep 4: Calculate the variance (population) Sum of squared differences = 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32 Variance = 32 ÷ 8 = 4\nStep 5: Calculate the standard deviation Standard deviation = √4 = 2\n2"
+    },
+    {
+      "prompt_id": "task8_format_n",
+      "task_id": 8,
+      "task_name": "standard_deviation",
+      "format": "numeric",
+      "presentation_order": 23,
+      "expected_answer": 2.0,
+      "extracted_answer": 2,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Calculate the mean Sum = 2 + 4 + 4 + 4 + 5 + 5 + 7 + 9 = 40 Count = 8 Mean = 40 ÷ 8 = 5\nStep 2: Calculate squared differences from the mean\n* (2 - 5)² = (-3)² = 9\n* (4 - 5)² = (-1)² = 1\n* (4 - 5)² = (-1)² = 1\n* (4 - 5)² = (-1)² = 1\n* (5 - 5)² = 0² = 0\n* (5 - 5)² = 0² = 0\n* (7 - 5)² = 2² = 4\n* (9 - 5)² = 4² = 16\nStep 3: Calculate the variance (population) Sum of squared differences = 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32 Variance = 32 ÷ 8 = 4\nStep 4: Calculate the standard deviation Standard deviation = √4 = 2\n2"
+    },
+    {
+      "prompt_id": "task8_format_w",
+      "task_id": 8,
+      "task_name": "standard_deviation",
+      "format": "words",
+      "presentation_order": 24,
+      "expected_answer": 2.0,
+      "extracted_answer": 2,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers\n* two, four, four, four, five, five, seven, nine → 2, 4, 4, 4, 5, 5, 7, 9\nStep 2: Calculate the mean Sum = 2 + 4 + 4 + 4 + 5 + 5 + 7 + 9 = 40 Count = 8 Mean = 40 ÷ 8 = 5\nStep 3: Calculate squared differences from the mean\n* (2 - 5)² = (-3)² = 9\n* (4 - 5)² = (-1)² = 1\n* (4 - 5)² = (-1)² = 1\n* (4 - 5)² = (-1)² = 1\n* (5 - 5)² = 0² = 0\n* (5 - 5)² = 0² = 0\n* (7 - 5)² = 2² = 4\n* (9 - 5)² = 4² = 16\nStep 4: Calculate the variance (population) Sum of squared differences = 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32 Variance = 32 ÷ 8 = 4\nStep 5: Calculate the standard deviation Standard deviation = √4 = 2\n2"
+    },
+    {
+      "prompt_id": "task9_format_n",
+      "task_id": 9,
+      "task_name": "matrix_multiplication",
+      "format": "numeric",
+      "presentation_order": 25,
+      "expected_answer": "[[4,4],[10,8]]",
+      "extracted_answer": "[[4,4],[10,8]]",
+      "llm_response_full": "Step-by-step calculation:\nMatrix A = [[1,2],[3,4]] Matrix B = [[2,0],[1,2]]\nStep 1: Calculate element (1,1) Row 1 of A × Column 1 of B = (1)(2) + (2)(1) = 2 + 2 = 4\nStep 2: Calculate element (1,2) Row 1 of A × Column 2 of B = (1)(0) + (2)(2) = 0 + 4 = 4\nStep 3: Calculate element (2,1) Row 2 of A × Column 1 of B = (3)(2) + (4)(1) = 6 + 4 = 10\nStep 4: Calculate element (2,2) Row 2 of A × Column 2 of B = (3)(0) + (4)(2) = 0 + 8 = 8\nStep 5: Construct result matrix Result = [[4,4],[10,8]]\n[[4,4],[10,8]]"
+    },
+    {
+      "prompt_id": "task9_format_w",
+      "task_id": 9,
+      "task_name": "matrix_multiplication",
+      "format": "words",
+      "presentation_order": 26,
+      "expected_answer": "[[4,4],[10,8]]",
+      "extracted_answer": "[[4,4],[10,8]]",
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers Matrix A = [[one,two],[three,four]] → [[1,2],[3,4]] Matrix B = [[two,zero],[one,two]] → [[2,0],[1,2]]\nStep 2: Calculate element (1,1) Row 1 of A × Column 1 of B = (1)(2) + (2)(1) = 2 + 2 = 4\nStep 3: Calculate element (1,2) Row 1 of A × Column 2 of B = (1)(0) + (2)(2) = 0 + 4 = 4\nStep 4: Calculate element (2,1) Row 2 of A × Column 1 of B = (3)(2) + (4)(1) = 6 + 4 = 10\nStep 5: Calculate element (2,2) Row 2 of A × Column 2 of B = (3)(0) + (4)(2) = 0 + 8 = 8\nStep 6: Construct result matrix Result = [[4,4],[10,8]]\n[[4,4],[10,8]]"
+    },
+    {
+      "prompt_id": "task9_format_s",
+      "task_id": 9,
+      "task_name": "matrix_multiplication",
+      "format": "strings",
+      "presentation_order": 27,
+      "expected_answer": "[[4,4],[10,8]]",
+      "extracted_answer": "[[4,4],[10,8]]",
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers Matrix A = [[\"1\",\"2\"],[\"3\",\"4\"]] → [[1,2],[3,4]] Matrix B = [[\"2\",\"0\"],[\"1\",\"2\"]] → [[2,0],[1,2]]\nStep 2: Calculate element (1,1) Row 1 of A × Column 1 of B = (1)(2) + (2)(1) = 2 + 2 = 4\nStep 3: Calculate element (1,2) Row 1 of A × Column 2 of B = (1)(0) + (2)(2) = 0 + 4 = 4\nStep 4: Calculate element (2,1) Row 2 of A × Column 1 of B = (3)(2) + (4)(1) = 6 + 4 = 10\nStep 5: Calculate element (2,2) Row 2 of A × Column 2 of B = (3)(0) + (4)(2) = 0 + 8 = 8\nStep 6: Construct result matrix Result = [[4,4],[10,8]]\n[[4,4],[10,8]]"
+    },
+    {
+      "prompt_id": "task10_format_w",
+      "task_id": 10,
+      "task_name": "sum_sequence",
+      "format": "words",
+      "presentation_order": 28,
+      "expected_answer": 120,
+      "extracted_answer": 120,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert words to numbers\n* one = 1\n* fifteen = 15\nStep 2: Add all integers from 1 to 15 1 + 2 = 3 3 + 3 = 6 6 + 4 = 10 10 + 5 = 15 15 + 6 = 21 21 + 7 = 28 28 + 8 = 36 36 + 9 = 45 45 + 10 = 55 55 + 11 = 66 66 + 12 = 78 78 + 13 = 91 91 + 14 = 105 105 + 15 = 120\nAlternatively using the formula: Sum = n(n+1)/2 = 15(16)/2 = 240/2 = 120\n120"
+    },
+    {
+      "prompt_id": "task10_format_s",
+      "task_id": 10,
+      "task_name": "sum_sequence",
+      "format": "strings",
+      "presentation_order": 29,
+      "expected_answer": 120,
+      "extracted_answer": 120,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Convert strings to numbers\n* \"1\" → 1\n* \"15\" → 15\nStep 2: Add all integers from 1 to 15 1 + 2 = 3 3 + 3 = 6 6 + 4 = 10 10 + 5 = 15 15 + 6 = 21 21 + 7 = 28 28 + 8 = 36 36 + 9 = 45 45 + 10 = 55 55 + 11 = 66 66 + 12 = 78 78 + 13 = 91 91 + 14 = 105 105 + 15 = 120\nAlternatively using the formula: Sum = n(n+1)/2 = 15(16)/2 = 240/2 = 120\n120"
+    },
+    {
+      "prompt_id": "task10_format_n",
+      "task_id": 10,
+      "task_name": "sum_sequence",
+      "format": "numeric",
+      "presentation_order": 30,
+      "expected_answer": 120,
+      "extracted_answer": 120,
+      "llm_response_full": "Step-by-step calculation:\nStep 1: Add all integers from 1 to 15 1 + 2 = 3 3 + 3 = 6 6 + 4 = 10 10 + 5 = 15 15 + 6 = 21 21 + 7 = 28 28 + 8 = 36 36 + 9 = 45 45 + 10 = 55 55 + 11 = 66 66 + 12 = 78 78 + 13 = 91 91 + 14 = 105 105 + 15 = 120\nAlternatively using the formula: Sum = n(n+1)/2 = 15(16)/2 = 240/2 = 120\n120"
+    }
+  ]
+}
