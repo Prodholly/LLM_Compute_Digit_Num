@@ -29,15 +29,15 @@ Claude Sonnet 4.5 systematically handles non-numeric formats by:
 
 ### 2. Consistent Step-by-Step Reasoning
 All 30 responses showed:
-- ✅ Clear intermediate calculations
-- ✅ Final answer on single line
-- ✅ Numeric-only final output
+- Clear intermediate calculations
+- Final answer on single line
+- Numeric-only final output
 
 ### 3. No Format-Specific Errors
 Contrary to expectations:
-- ❌ No string concatenation errors (e.g., "12" + "37" = "1237")
-- ❌ No parsing failures for decimal words (e.g., "five point five")
-- ❌ No calculation mistakes in any format
+- No string concatenation errors (e.g., "12" + "37" = "1237")
+- No parsing failures for decimal words (e.g., "five point five")
+- No calculation mistakes in any format
 
 ## Results by Task Type
 
